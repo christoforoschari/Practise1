@@ -13,7 +13,9 @@
 int main()
 {
     const int MAX_ROW = 5;
+    double matrix[MAX_ROW][MAX_COL] = { 1,2,1,2 };
 
+    fillWithRandomNum(matrix, MAX_ROW);
     return 0;
 }
 

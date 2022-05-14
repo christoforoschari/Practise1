@@ -1,9 +1,11 @@
+
 #include "Matrix.h"
 #include <iostream>
 #include <cassert>
 #include<cstdlib>
 #include<ctime>
 using namespace std;
+
 
 double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow)
 {
@@ -58,4 +60,17 @@ void printMatrix(const double mat[][MAX_COL], const int maxRow)
 
 }
 
-
+double* sumofRows(const double mat[][MAX_COL], const int maxRow) {
+	
+	double* ptr;
+	
+	ptr = new double[maxRow] {0};
+	assert(ptr >= 0);
+	for (int i=0; i < maxRow; ++i) {
+		for (int j = 0; j < MAX_COL; ++j) {
+			ptr[i] = mat[i][j];
+		}
+	}
+	
+	return ptr;
+}
